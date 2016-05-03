@@ -1,0 +1,11 @@
+<div class="row">
+	<div class="large-12 columns">
+		<label>Nombre de la tarjeta<input type="text"
+			placeholder="Nombre" name="nombre" ng-model="nombretarjeta" />
+		</label><span ng-if="error_editar_tarjeta.length > 0">
+			<div data-alert class="alert-box alert">
+				{{error_editar_tarjeta}}</div>
+	</div>
+	<button ng-click="actualizarTarjeta()" class="button">Modificar</button>
+	<button ng-click="cancelarModTarjeta()" class="button">Cancelar</button>
+</div>

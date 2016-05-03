@@ -1,0 +1,12 @@
+
+<div class="row">
+	<div class="large-12 columns">
+		<label>Nombre de la lista<input type="text"
+			placeholder="Nombre" name="nombre" ng-model="nombrelista" ng-required="true"/>
+		</label><span ng-if="error_crear_lista.length > 0">
+			<div data-alert class="alert-box alert">{{error_crear_lista}}</div>
+		</span>
+	</div>
+	<button ng-click="crearLista()" class="button">Crear</button>
+	<button ng-click="cancelarCrearLista()" class="button">Cancelar</button>
+</div>

@@ -1,0 +1,12 @@
+<div class="row text-center">
+	<div class="large-12">
+		<label>Usuario<input type="text"
+			placeholder="Nombre de usuario" name="usuario" ng-model="usuario" />
+		</label> <label>Contraseña<input type="password" placeholder="******"
+			name="password" ng-model="password" />
+		</label><span ng-if="error_login.length > 0">
+			<div data-alert class="alert-box alert">{{error_login}}</div>
+		</span>
+	</div>
+	<button ng-click="hacerLogin()" class="button expand">Login</button>
+</div>

@@ -1,0 +1,52 @@
+<nav class="top-bar">
+	<section class="top-bar-section">
+		<!-- Right Nav Section -->
+		<ul class="right">
+			<li class="active"><a href="#/home">Salir</a></li>
+		</ul>
+	</section>
+</nav>
+
+<div class="panel">
+	<h1 class="text-center">Tablones</h1>
+</div>
+<span ng-if="error_eliminar_tablon.length > 0">
+	<div data-alert class="alert-box alert">
+		{{error_eliminar_tablon}}</div>
+</span>
+<div class="column">
+	<div class="small-10 columns">
+		<div class="button-bar">
+			<ul class="button-group">
+				<li><button ng-click="crearTablon()" class="tiny button">Nuevo</li>
+
+			</ul>
+		</div>
+	</div>
+	<div class="small-2 columns text-right">
+		<input type="text" placeholder="Tablón a buscar" ng-model="searchText" />
+	</div>
+</div>
+
+
+
+<ul ng-repeat="b in tabloncetes | filter:searchText">
+	<div class="column">
+		<div class="small-12 columns text-left">
+			<div class="panel">
+				<a href="#/listado-lista/{{b.id}}">{{b.name}}</a>
+				<div class="button-bar text-right">
+					<ul class="right button-group">
+						<li><button ng-click="editarTablon(b.id)" class="tiny button">Editar</li>
+						<li><button ng-click="eliminarTablon(b.id)"
+								class="tiny button">Eliminar</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</ul>
+
+
+
+

@@ -1,0 +1,13 @@
+<div class="row">
+	<div class="large-12 columns">
+		<label>Nombre del tablón <input type="text"
+			placeholder="Nombre" name="nombre" ng-model="nombretablon" />
+		</label> <span ng-if="error_editar_tablon.length > 0">
+			<div data-alert class="alert-box alert">
+				{{error_editar_tablon}}</div>
+		</span>
+	</div>
+	<button ng-click="actualizarTablon()" class="button">Modificar</button>
+	<button ng-click="cancelarModTablon()" class="button">Cancelar</button>
+</div>
+

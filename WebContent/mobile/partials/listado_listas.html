@@ -1,0 +1,77 @@
+<nav class="top-bar">
+	<section class="top-bar-section">
+		<!-- Right Nav Section -->
+		<ul class="right">
+			<li class="active"><a href="#/home">Salir</a></li>
+		</ul>
+	</section>
+</nav>
+<div class="panel">
+	<h1 class="text-center">Listas</h1>
+</div>
+<span ng-if="error_eliminar_lista.length > 0">
+	<div data-alert class="alert-box alert">{{error_eliminar_lista}}</div>
+</span>
+<span ng-if="error_eliminar_tarjeta.length > 0">
+	<div data-alert class="alert-box alert">
+		{{error_eliminar_tarjeta}}</div>
+</span>
+<div class="column">
+	<div class="small-9 columns">
+		<div class="button-bar">
+			<ul class="button-group">
+				<li><button ng-click="volverAtras()" class="tiny secondary">Volver</li>
+			</ul>
+			<ul class="button-group">
+				<li><button ng-click="crearLista()" class="tiny button">Nueva</li>
+			</ul>
+		</div>
+	</div>
+	<div class="small-2 columns text-right">
+		<input type="text" placeholder="Lista a buscar" ng-model="searchText" />
+	</div>
+</div>
+<ul ng-repeat="l in listitas | filter:searchText">
+	<div class="column">
+		<div class="small-12 columns text-left">
+			<div class="panel">
+
+				<span class="label">{{l.name}}</span>
+
+				<ul ng-repeat="t in tarjetitas">
+
+					<span ng-if="l.id == t.list">
+						<div class="panel">
+							<span class="success label text-center">{{t.name}}</span> <select
+								class="small-3" ng-model="moveralista"
+								ng-options="o as o for o in nombresLista">
+								<option value="">Mover a...</option>
+							</select>
+
+
+							<div class="button-bar text-right">
+								<ul class="right button-group">
+									<li><button ng-click="moverTarjeta(t.id,moveralista)"
+											class="tiny success button">Mover a {{moveralista}}</li>
+									<li><button ng-click="editarTarjeta(t.id)"
+											class="tiny success button">Editar</li>
+									<li><button ng-click="eliminarTarjeta(t.id)"
+											class="tiny success button">Eliminar</li>
+								</ul>
+							</div>
+						</div>
+					</span>
+				</ul>
+				<div class="button-bar text-right">
+					<ul class="right button-group">
+						<li><button ng-click="editarLista(l.id)" class="tiny button">Editar</li>
+						<li><button ng-click="crearTarjeta(l.id)" class="tiny button">Añadir
+								tarjeta</li>
+						<li><button ng-click="eliminarLista(l.id)"
+								class="tiny button">Eliminar</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</ul>

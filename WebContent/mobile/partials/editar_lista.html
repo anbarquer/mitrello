@@ -1,0 +1,11 @@
+<div class="row">
+	<div class="large-12 columns">
+		<label>Nombre de la lista<input type="text"
+			placeholder="Nombre" name="nombre" ng-model="nombrelista" />
+		</label> <span ng-if="error_editar_lista.length > 0">
+			<div data-alert class="alert-box alert">{{error_editar_lista}}</div>
+		</span>
+	</div>
+	<button ng-click="actualizarLista()" class="button">Modificar</button>
+	<button ng-click="cancelarModLista()" class="button">Cancelar</button>
+</div>

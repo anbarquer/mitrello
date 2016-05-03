@@ -1,0 +1,42 @@
+* {
+	margin: 0;
+}
+
+html,body {
+	height: 100%;
+}
+
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -4em;
+}
+
+.footer,.push {
+	height: 4em;
+}
+
+.panel{
+	border-color: black;
+}
+
+.small-3{
+	margin-left: 73.8%;
+}
+
+.label.success{
+	margin-right: 90%;
+}
+
+.top-bar{
+	background: #008cba;
+}
+
+body{
+	background: #008cba;
+}
+
+.footer > .text-center{
+	color:white;
+}
