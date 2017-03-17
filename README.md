@@ -5,6 +5,6 @@
 <li>Otra versión utilizando AngularJS y Foundation</li>
 </ol>
 <p>Versión JEE + CSS</p>
-![Alt text](https://raw.githubusercontent.com/anbarquer/mitrello/master/screen/jee.png)
+<img src="https://raw.githubusercontent.com/anbarquer/mitrello/master/screen/jee.png"/>
 <p>Versión AngularJS + Foundation</p>
-![Alt text](https://raw.githubusercontent.com/anbarquer/mitrello/master/screen/angular.png)
+<img src="https://raw.githubusercontent.com/anbarquer/mitrello/master/screen/angular.png"/>
